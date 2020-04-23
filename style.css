@@ -53,7 +53,6 @@ body {
     width: 100%;
     display: grid;
     padding: 17px;
-    border: 1px solid grey;
     position: relative;
 }
 
