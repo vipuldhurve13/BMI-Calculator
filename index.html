@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+
+    <div class="heading">
+        <h2 class="app-title">BMI Calculator</h2>
+    </div>
+
+
+    <div class="wrapper clearfix">
+        <div>
+            <h2 class="BMI-subHeading">Learn Your Body Mass Index (BMI)</h2>
+        </div>
+        <div class="invalid">
+            Please select a gender.
+        </div>
+        <div class="panel">
+
+            <div class="top-container">
+                <div class="aboutYou-container">
+                    <h3 class="aboutYou">About You</h3>
+                </div>
+
+                <div class="container">
+                    <div class="container1 ">
+                        <section class="plan ">
+                            <input type="radio" name="radio1" id="english" value="eng" onclick="return englishForm();"
+                                checked>
+                            <label class="english-label type " for="english">English</label>
+                            <input type="radio" name="radio1" id="metric" value="met" onclick="return metricForm();">
+                            <label class="metric-label type " for="metric">Metric</label>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="genderContainer">
+                <div class="checkboxes" id="male-box">
+                    <input type="radio" class="male" name="gender" id="radioMale" onclick="return invalidCheck();">
+                    <label for="radioMale" onclick="return invalidCheck();">Male</label>
+                </div>
+                <div class="checkboxes" id="female-box">
+                    <input type="radio" class="female" name="gender" id="radioFemale" onclick="return invalidCheck();">
+                    <label for="radioFemale" onclick="return invalidCheck();">Female</label>
+                </div>
+            </div>
+
+            <div class="ageContainer">
+                <input type="text" placeholder="Age" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                    class="age-box">
+
+                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                    placeholder="Height     &#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;         cm"
+                    class="metric-height">
+
+                <select class="english-height">
+                    <option value="">Height Ft.</option>
+                    <option value="3">3 ft</option>
+                    <option value="4">4 ft</option>
+                    <option value="5">5 ft</option>
+                    <option value="6">6 ft</option>
+                    <option value="7">7 ft</option>
+                    <option value="8">8 ft</option>
+                </select>
+
+                <select class="english-height-inches">
+                    <option value="">In.</option>
+                    <option value="1">0 in</option>
+                    <option value="2">2 in</option>
+                    <option value="3">3 in</option>
+                    <option value="4">4 in</option>
+                    <option value="5">5 in</option>
+                    <option value="6">6 in</option>
+                    <option value="7">7 in</option>
+                    <option value="8">8 in</option>
+                    <option value="9">9 in</option>
+                </select>
+            </div>
+
+            <div class="weightContainer">
+                <input type="text" name="weight-box"
+                    placeholder="Current Weight &#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;  &#x09;&#x09;&#x09;&#x09;&#x09;&#x09; lbs"
+                    onkeypress='return event.charCode >= 48 && event.charCode <= 57' size="18" class="weight">
+            </div>
+
+
+            <div id="button1" class="calculate-container">
+                <button onclick="return validateForm();" id="btnCaclculate" class="calculate">CALCULATE</button>
+            </div>
+
+            <div class="startOverContainer">
+                <button onclick="return initialize();" id="btnStartOver1" class="startOver">START OVER</button>
+            </div>
+
+
+        </div>
+
+        <!-- <div class="result">
+
+
+            <div class="yourResults">Your Results</div>
+            <div class="bmiResult">Based on your body mass index (BMI) of 22.8, you are classed at a normal
+                weight.
+            </div>
+
+
+            <div class="imgContainer">
+                <img class="bmiImage" src="bmi.png">
+                <span class="content">A healthy BMI is between 18.5 and 24.9, but these numbers can vary for
+                    athletes,
+                    pregnant women, and
+                    between ethnicities.
+                    <br /> <br />
+
+                    An overweight BMI is generally associated with higher risk of chronic diseases like heart
+                    disease
+                    and diabetes. Your health care provider can help you better understand the reasons you’re
+                    overweight
+                    and how they affect your health.
+                    <br /> <br />
+
+                    Remember that BMI is interpreted and classified differently for children ages 2 to 20. Health
+                    professionals use growth charts and percentiles based on age and sex.
+                </span>
+            </div>
+
+            <div id="startOver2Container" class="calculate-container">
+                <button onclick="return initialize();" id="btnStartOver2" class="calculate">STARTOVER</button>
+            </div>
+
+        </div> -->
+
+
+    </div>
+
+    <script src="app.js">
+    </script>
+
+
+</body>
+
+</html>
