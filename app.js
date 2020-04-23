@@ -73,7 +73,7 @@ var metricForm = function () {
     document.querySelector(domStrings.englishHeight).style.display = 'none';
     document.querySelector(domStrings.englishHeightInches).style.display = 'none';
     document.querySelector(domStrings.age).style.width = '50.5%';
-    document.getElementsByName('weight-box')[0].placeholder = 'Current Weight                  \t \t   \t \t                    \t \t \t \t \t \t Kg';
+    document.getElementsByName('weight-box')[0].placeholder = 'Current Weight (Kg)';
 };
 
 var englishForm = function () {
@@ -81,7 +81,7 @@ var englishForm = function () {
     document.querySelector(domStrings.englishHeight).style.display = 'inline-block';
     document.querySelector(domStrings.englishHeightInches).style.display = 'inline-block';
     document.querySelector(domStrings.age).style.width = '38%';
-    document.getElementsByName('weight-box')[0].placeholder = 'Current Weight                \t \t   \t \t                \t \t \t \t \t \t  lbs';
+    document.getElementsByName('weight-box')[0].placeholder = 'Current Weight (lbs)';
 };
 
 //Initialize Function for start over button----------------------------------------------------
